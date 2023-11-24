@@ -44,8 +44,59 @@
         </div>
         <!-- End 0f Categories Container -->
 
-        <div class="data-container" id="data-container"></div>
-        <div class="form-container" id="form-container"></div>
+        <!-- Start 0f Data Container -->
+        <div class="data-container" id="data-container">
+
+        </div>
+        <!-- End 0f Data Container -->
+
+        <!-- Start 0f Form Container -->
+        <div class="form-container" id="form-container">
+            <h2>Add New Bookmark</h2>
+            <form action="#" method="post" id="form">
+                <div class="input">
+                    <label for="categories">Categories </label>
+                    <select name="categories" id="categories">
+                        <option value="none" selected>Select One</option>
+                        <option value="javaScript">JavaScript</option>
+                        <option value="react">React</option>
+                        <option value="nodeJS">Node.JS</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="python">Python</option>
+                        <option value="django">Django</option>
+                        <option value="fastAPI">Fast API</option>
+                        <option value="git">Git</option>
+                        <option value="docker">Docker</option>
+                        <option value="sql">SQL</option>
+                        <option value="mySql">MySQL</option>
+                        <option value="postgreSql">PostgreSQL</option>
+                        <option value="celery">Celery</option>
+                        <option value="redis">Redis</option>
+                        <option value="swagger">Swagger</option>
+                        <option value="postman">Postman</option>
+                        <option value="vsCode">VS Code</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div class="input">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" name="description">
+                </div>
+                <div class="input">
+                    <label for="url">URL</label>
+                    <input type="url" id="url" name="url">
+                </div>
+                <div class="input">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        <!-- End 0f Data Container -->
+
         <div class="footer" id="footer"></div>
     </div>
     <!-- End of Main Container -->
