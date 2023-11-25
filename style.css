@@ -7,6 +7,7 @@
     --middle-font-color: #84B0C1;
     --light-fonf-color: #ddd;
 
+
     font-size: 10px;
     font-family: 'Recursive', sans-serif;
 }
@@ -18,10 +19,11 @@
     /* border: 1px solid red; */
 }
 
+
 .main-container {
     display: grid;
     grid-template-columns: 1fr 3fr 2fr;
-    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
     position: relative;
 }
 
@@ -38,7 +40,7 @@
     box-shadow: 4px 4px 6px 0 var(--light-fonf-color);
     position: sticky;
     top: 0;
-    z-index: 5;
+    /* z-index: 5; */
 }
 
 .header > img {
@@ -76,7 +78,7 @@
     align-items: flex-start;
     gap: 1.5rem;
     box-shadow: 4px 4px 6px 0 var(--light-fonf-color);
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 .categories-container > div {
@@ -103,14 +105,47 @@
     background-color: var(--bg-color);
     grid-column: 2 / 4;
     grid-row: 2 / 3;
+    /* z-index: -1; */
 }
+
+.data-container > .sub-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 260px);
+    grid-template-rows: repeat(auto-fit, 200px);
+    justify-content: center;
+    gap: 25px;
+    margin: 30px;
+}
+
+.data-container > .sub-container > .card {
+    background-color: var(--main-bg-color);
+    /* max-width: 300px; */
+    min-width: 200px;
+    /* max-height: 220px; */
+    min-height: 200px;
+    padding: 15px;
+    border-top: 2px solid var(--main-color);
+    border-left: 2px solid var(--main-color);
+    border-radius: 2px 8px 2px 8px;
+    box-shadow: 4px 4px 6px 0 var(--light-fonf-color);
+}
+
+.data-container > .sub-container > .card > p {
+    color: var(--middle-font-color);
+    font-size: 1.4rem;
+    /* text-overflow: ellipsis; */
+    /* word-wrap: none; */
+    word-break: break-all;
+}
+
 
 
 /* Form Container Styles */
 .form-container {
     background-color: var(--second-bg-color);
-    grid-column: 3 / 4;
+    grid-column: 4 / 4;
     grid-row: 2 / 3;
+    width: calc(100vw / 3);
     height: 100vh;
     padding: 25px;
     border-left: 2px solid var(--main-color);
@@ -120,8 +155,7 @@
     position: fixed;
     top: 1fr;
     right: 0;
-    z-index: 4;
-    opacity: 1;
+    /* z-index: 4; */
 }
 
 .form-container > h2 {
@@ -183,5 +217,5 @@
     background-color: var(--dark-font-color);
     grid-column: 1 / 4;
     grid-row: 3 / 4;
-    z-index: 3;
+    /* z-index: 3; */
 }
