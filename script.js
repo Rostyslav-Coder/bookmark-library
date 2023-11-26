@@ -259,5 +259,4 @@ const addBookmark = function() {
     let list = categoriesList.find(list => list[0].categories === userData.categories);
 
     list.push(userData);
-    // containers.dataSubContainer.innerHTML += createCard(userData);
 };
