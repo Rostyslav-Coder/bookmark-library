@@ -1,3 +1,5 @@
+// Bookmark Library
+
 
 // Like Database
 const javaScript = [
@@ -139,6 +141,7 @@ const vsCodeList = [
 ];
 
 
+// Library List
 const categoriesList = [
     javaScript,
     reactList,
@@ -196,6 +199,8 @@ let addData = document.querySelector('#add');
 
 containers.formContainer.style.zIndex = '-2';
 
+
+// Hide / unhide the user input form
 addData.addEventListener('click', function() {
     if (containers.formContainer.style.zIndex === '-2') {
         addData.style.transform = 'rotate(45deg)';
@@ -211,7 +216,7 @@ addData.addEventListener('click', function() {
 });
 
 
-// Функция для создания HTML-карточки
+// Function for creating an HTML card
 function createCard(data) {
     return `
         <div class="card">
@@ -228,16 +233,13 @@ function createCard(data) {
 };
 
 
-// Добавляем обработчики событий для каждой кнопки
+// Add event handlers for each button
 Object.keys(buttonValues).forEach(key => {
     buttonValues[key].addEventListener('click', () => {
-        // Очищаем контейнер
         containers.dataSubContainer.innerHTML = '';
         
-        // Находим нужный список
         const list = categoriesList.find(list => list[0].categories === key);
         
-        // Добавляем данные в контейнер
         list.forEach(item => {
             containers.dataSubContainer.innerHTML += createCard(item);
         });
@@ -245,8 +247,17 @@ Object.keys(buttonValues).forEach(key => {
 });
 
 
-// Object.values(buttonValues).forEach(keys => {
-//     keys.addEventListener('click', (event) => {
-//         alert('Button clicked: ', event.target);
-//     });
-// });
+// Add a new user entry
+const addBookmark = function() {
+    let userData = {
+        categories: document.querySelector('#form').elements.namedItem('categories').value,
+        title: document.querySelector('#form').elements.namedItem('title').value,
+        description: document.querySelector('#form').elements.namedItem('description').value,
+        url: document.querySelector('#form').elements.namedItem('url').value
+    };
+
+    let list = categoriesList.find(list => list[0].categories === userData.categories);
+
+    list.push(userData);
+    // containers.dataSubContainer.innerHTML += createCard(userData);
+};
