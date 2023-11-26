@@ -1,8 +1,8 @@
 :root {
     --main-color: #FF8C00;
-    --main-bg-color: #202124;
-    --second-bg-color: #35363A;
-    --bg-color: #555;
+    --main-bg-color: #2B2B2B;
+    --second-bg-color: #333333;
+    --bg-color: #3B3B3B;
     --dark-font-color: #212121;
     --middle-font-color: #84B0C1;
     --light-fonf-color: #ddd;
@@ -110,7 +110,7 @@
 .data-container > .sub-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, 260px);
-    grid-template-rows: repeat(auto-fit, 200px);
+    grid-template-rows: repeat(auto-fit, 250px);
     justify-content: center;
     gap: 25px;
     margin: 30px;
@@ -119,7 +119,7 @@
 .data-container > .sub-container > .card {
     background-color: var(--main-bg-color);
     min-width: 200px;
-    min-height: 200px;
+    height: 250px;
     padding: 15px;
     border-top: 2px solid var(--main-color);
     border-left: 2px solid var(--main-color);
@@ -130,6 +130,19 @@
 .data-container > .sub-container > .card > p {
     color: var(--middle-font-color);
     font-size: 1.4rem;
+    height: 25px;
+    width: 90%;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.data-container > .sub-container > .card > p:nth-child(even) {
+    border-top: 1px solid var(--main-color);
+    border-left: 1px solid var(--main-color);
+    border-radius: 2px 8px 2px 8px;
+    box-shadow: 4px 4px 6px 0 var(--light-fonf-color);
+    padding: 2px 0 2px;
+    margin-bottom: 4px;
     word-break: break-all;
 }
 
